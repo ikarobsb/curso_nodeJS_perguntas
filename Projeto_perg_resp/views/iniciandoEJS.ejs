@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas e Respostas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Perguntas e Respostas</h1>
+    <hr>
+    <h3>Lista de perguntas</h3>
+    <h4>Seu nome é <%= nome %></h4>
+    <h5>Sua linguagem favorita é <%= lang %></h5>
+
+    <!-- Condições -->
+    
+    <% if(msg == true){ %>
+        <h3>Isso é uma mensagem de erro!</h3>
+    <%} else {%>
+        <h3>Isso é uma mensagem de sucesso!</h3>
+    <%}%>
+
+    <!-- Estruturas de repetição dentro do EJS -->
+    <% produtos.forEach(function(produto){ %>
+        <hr>
+        <h3><%= produto.nome %></h3>
+        <h4><%= produto.preco %></h4>
+    <% }) %>
+    
+    <img src="/img/SOLAR.png" alt="solar limp">
+
+</body>
+</html>

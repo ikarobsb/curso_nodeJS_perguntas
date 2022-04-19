@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs'); %>
+<body>
+  <div class="container">
+    <!-- Container é um recurso do bootstrap que centraliza o conteúdo no meio do navegador -->
+    <%- include('partials/navbar.ejs'); %>
+    <div class="card" id="formulario-pergunta">
+      <div class="card-header">
+        <h3>Realizar Pergunta</h3>
+      </div>
+
+      <div class="card-body">
+        <form method="POST" action="/salvarpergunta">
+        <!-- método GET utilizam o query params (dados passados na URL), já no método POST os dados são passados dentro da requisição -->
+        <!-- Action = definição de rota -->
+          <label>Título</label>
+          <input type="text" placeholder="Título" class="form-control" name="titulo"/>
+          <br />
+          <label>Descrição</label>
+          <textarea
+            class="form-control"
+            placeholder="Descreva sua pergunta aqui" name="descricao"
+          ></textarea>
+          <br />
+          <button class="btn btn-primary">Perguntar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<%- include('partials/footer.ejs'); %>
